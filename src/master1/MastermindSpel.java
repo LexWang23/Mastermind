@@ -29,9 +29,9 @@ class MastermindSpel {
 //		geheimecode maken
 		String[] geheimeCodes = new String[4];
 		geheimeCodes[0] = RodePin;
-		geheimeCodes[1] = GelePin;
-		geheimeCodes[2] = BlauwePin;
-		geheimeCodes[3] = GroenePin;
+		geheimeCodes[1] = RodePin;
+		geheimeCodes[2] = RodePin;
+		geheimeCodes[3] = RodePin;
 
 //		pogingen
 		String[] poging = new String[4];
@@ -74,36 +74,14 @@ class MastermindSpel {
 						|| poging[i].equalsIgnoreCase(geheimeCodes[2]) || poging[i].equalsIgnoreCase(geheimeCodes[3])
 
 				) {
-
-				}
-
-			}
-			
-			for (int i = 0; i < 4; i++) {
-
-				if (poging[i].equalsIgnoreCase(geheimeCodes[i])) {
 					WittePinnen++;
-				} else if (poging[i].equalsIgnoreCase(geheimeCodes[0]) || poging[i].equalsIgnoreCase(geheimeCodes[1])
-						|| poging[i].equalsIgnoreCase(geheimeCodes[2]) || poging[i].equalsIgnoreCase(geheimeCodes[3])
-				) {
-
+					}
 				}
-
-			}
-
-//				boolean kleurChecken = false;
-//
-//				for (int j = 0; j < 4; j++) {
-//					if (poging[i].equals(j)) {
-//						kleurChecken = true;
-//						break;
-//					}
-//				}
 
 			System.out.println("totale zwarte pinnen: " + ZwartePinnen);
 			System.out.println("totale witte pinnen: " + WittePinnen);
 
-			if (ZwartePinnen >= 4) {
+			if (ZwartePinnen == 4) {
 				System.out.println("je hebt gewonnen!!!");
 				gewonnen = true;
 				break;
@@ -119,22 +97,5 @@ class MastermindSpel {
 		if (gewonnen == false) {
 			System.out.println("je hebt verloren");
 		}
-//		do while (ZwartePinnen < 4) {
-//		}
-
-//		if (poging[0].equalsIgnoreCase(geheimeCodes[0]))
-//
-//		{
-//			System.out.println("je hebt één zwarte");
-//		} else if (poging[0].equalsIgnoreCase(geheimeCodes[1])) {
-//			System.out.println("je hebt één wit");
-//		} else if (poging[0].equalsIgnoreCase(geheimeCodes[2])) {
-//			System.out.println("je hebt één wit");
-//		} else if (poging[0].equalsIgnoreCase(geheimeCodes[3])) {
-//			System.out.println("je hebt één wit");
-//		} else {
-//			System.out.println("deze kleur zit niet in de code");
-//		}
-
 	}
 }

@@ -26,3 +26,8 @@ replay_pid*
 .project
 /.settings
 src/module-info.java
+src/mastermind/MastermindSpel.java
+MastermindSpel1.java
+src/mastermind/MastermindSpel.java
+/src
+*.java
